@@ -11,7 +11,33 @@
 		96C33B9E2BB55ED30023B934 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C33B9D2BB55ED30023B934 /* ContentView.swift */; };
 		96C33BA02BB55ED50023B934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C33B9F2BB55ED50023B934 /* Assets.xcassets */; };
 		96C33BA32BB55ED50023B934 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C33BA22BB55ED50023B934 /* Preview Assets.xcassets */; };
+		96C33BB12BB561630023B934 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C33BB02BB561630023B934 /* NotificationService.swift */; };
+		96C33BB52BB561630023B934 /* PushNotificationTest.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 96C33BAE2BB561620023B934 /* PushNotificationTest.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96C33BB32BB561630023B934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96C33B902BB55ED30023B934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96C33BAD2BB561620023B934;
+			remoteInfo = PushNotificationTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96C33BB92BB561630023B934 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				96C33BB52BB561630023B934 /* PushNotificationTest.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		96C33B982BB55ED30023B934 /* testAppcircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testAppcircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +45,21 @@
 		96C33B9D2BB55ED30023B934 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96C33B9F2BB55ED50023B934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C33BA22BB55ED50023B934 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96C33BA92BB560100023B934 /* testAppcircle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testAppcircle.entitlements; sourceTree = "<group>"; };
+		96C33BAE2BB561620023B934 /* PushNotificationTest.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushNotificationTest.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C33BB02BB561630023B934 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		96C33BB22BB561630023B934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		96C33B952BB55ED30023B934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96C33BAB2BB561620023B934 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				96C33B9A2BB55ED30023B934 /* testAppcircle */,
+				96C33BAF2BB561630023B934 /* PushNotificationTest */,
 				96C33B992BB55ED30023B934 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				96C33B982BB55ED30023B934 /* testAppcircle.app */,
+				96C33BAE2BB561620023B934 /* PushNotificationTest.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +90,7 @@
 		96C33B9A2BB55ED30023B934 /* testAppcircle */ = {
 			isa = PBXGroup;
 			children = (
+				96C33BA92BB560100023B934 /* testAppcircle.entitlements */,
 				96C33B9B2BB55ED30023B934 /* testAppcircleApp.swift */,
 				96C33B9D2BB55ED30023B934 /* ContentView.swift */,
 				96C33B9F2BB55ED50023B934 /* Assets.xcassets */,
@@ -67,6 +107,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		96C33BAF2BB561630023B934 /* PushNotificationTest */ = {
+			isa = PBXGroup;
+			children = (
+				96C33BB02BB561630023B934 /* NotificationService.swift */,
+				96C33BB22BB561630023B934 /* Info.plist */,
+			);
+			path = PushNotificationTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +126,34 @@
 				96C33B942BB55ED30023B934 /* Sources */,
 				96C33B952BB55ED30023B934 /* Frameworks */,
 				96C33B962BB55ED30023B934 /* Resources */,
+				96C33BB92BB561630023B934 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				96C33BB42BB561630023B934 /* PBXTargetDependency */,
 			);
 			name = testAppcircle;
 			productName = testAppcircle;
 			productReference = 96C33B982BB55ED30023B934 /* testAppcircle.app */;
 			productType = "com.apple.product-type.application";
+		};
+		96C33BAD2BB561620023B934 /* PushNotificationTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96C33BB62BB561630023B934 /* Build configuration list for PBXNativeTarget "PushNotificationTest" */;
+			buildPhases = (
+				96C33BAA2BB561620023B934 /* Sources */,
+				96C33BAB2BB561620023B934 /* Frameworks */,
+				96C33BAC2BB561620023B934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushNotificationTest;
+			productName = PushNotificationTest;
+			productReference = 96C33BAE2BB561620023B934 /* PushNotificationTest.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +166,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					96C33B972BB55ED30023B934 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					96C33BAD2BB561620023B934 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -116,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				96C33B972BB55ED30023B934 /* testAppcircle */,
+				96C33BAD2BB561620023B934 /* PushNotificationTest */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +199,13 @@
 			files = (
 				96C33BA32BB55ED50023B934 /* Preview Assets.xcassets in Resources */,
 				96C33BA02BB55ED50023B934 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96C33BAC2BB561620023B934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +221,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96C33BAA2BB561620023B934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C33BB12BB561630023B934 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96C33BB42BB561630023B934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96C33BAD2BB561620023B934 /* PushNotificationTest */;
+			targetProxy = 96C33BB32BB561630023B934 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		96C33BA42BB55ED50023B934 /* Debug */ = {
@@ -267,8 +362,11 @@
 		96C33BA72BB55ED50023B934 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = testAppcircle/testAppcircle.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"testAppcircle/Preview Content\"";
@@ -287,6 +385,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcircle.testAppcircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,8 +395,11 @@
 		96C33BA82BB55ED50023B934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = testAppcircle/testAppcircle.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"testAppcircle/Preview Content\"";
@@ -316,6 +418,59 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcircle.testAppcircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		96C33BB72BB561630023B934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U2Z24R99J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotificationTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PushNotificationTest;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcircle.testAppcircle.PushNotificationTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96C33BB82BB561630023B934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U2Z24R99J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotificationTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PushNotificationTest;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcircle.testAppcircle.PushNotificationTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +494,15 @@
 			buildConfigurations = (
 				96C33BA72BB55ED50023B934 /* Debug */,
 				96C33BA82BB55ED50023B934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96C33BB62BB561630023B934 /* Build configuration list for PBXNativeTarget "PushNotificationTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96C33BB72BB561630023B934 /* Debug */,
+				96C33BB82BB561630023B934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
